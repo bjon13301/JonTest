@@ -20,7 +20,7 @@ steps:
     azureResourceManagerConnection: 'Pay-As-You-Go (1a1111b1-6644-4109-9949-2dec5f9e7c09)'
     subscriptionId: '1a1111b1-6644-4109-9949-2dec5f9e7c09'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'JonTest'
+    resourceGroupName: 'JonTest-One'
     location: 'West US 2'
     templateLocation: 'Linked artifact'
     csmFile: 'https://aka.ms/sampletemplate'
