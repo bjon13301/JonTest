@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- none
 
 pool:
   vmImage: ubuntu-latest
@@ -13,7 +13,12 @@ steps:
 - task: TerraformInstaller@0
   inputs:
     terraformVersion: 'latest'
-  displayName: 'Run a multi-line script'
+  displayName: Install Terraform
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    allowTelemetryCollection: true
 
 - task: TerraformCLI@0
   inputs:
