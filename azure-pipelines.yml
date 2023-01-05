@@ -1,15 +1,4 @@
 # Starter pipeline
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Pay-As-You-Go (1a1111b1-6644-4109-9949-2dec5f9e7c09)'
-    subscriptionId: '1a1111b1-6644-4109-9949-2dec5f9e7c09'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'JonTest'
-    location: 'West US 2'
-    templateLocation: 'Linked artifact'
-    csmFile: 'https://aka.ms/sampletemplate'
-    deploymentMode: 'Incremental'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -25,6 +14,15 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Pay-As-You-Go (1a1111b1-6644-4109-9949-2dec5f9e7c09)'
+    subscriptionId: '1a1111b1-6644-4109-9949-2dec5f9e7c09'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'JonTest'
+    location: 'West US 2'
+    templateLocation: 'Linked artifact'
+    csmFile: 'https://aka.ms/sampletemplate'
+    deploymentMode: 'Incremental'
   displayName: 'Run a multi-line script'
