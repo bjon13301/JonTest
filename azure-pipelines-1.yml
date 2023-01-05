@@ -20,6 +20,16 @@ steps:
     command: 'init'
     allowTelemetryCollection: true
 
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github.com_bjon13301'
+    repositoryName: 'bjon13301/JonTest'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
+    
 - task: TerraformCLI@0
   inputs:
     command: 'validate'
