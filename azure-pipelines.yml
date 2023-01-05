@@ -25,4 +25,3 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: 'https://aka.ms/sampletemplate'
     deploymentMode: 'Incremental'
-  displayName: 'Run a multi-line script'
