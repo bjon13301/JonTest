@@ -4,11 +4,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-variables:
-  - group: JonTest
-  - group: JonTest-ADT
-  - group: JonTest-QAT
-
 steps:
 - task: TerraformInstaller@0
   inputs:
